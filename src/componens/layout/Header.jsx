@@ -1,17 +1,39 @@
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import Cookies from "js-cookie";
 import { NavLink } from "react-router-dom";
-// import { FaUserSlash } from "react-icons/fa";
+
+import { FaUserSlash } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa6";
 
-import { useAuth } from "../../providers-contexts/AuthContext";
+import { useAuth } from "../../providers-contexts/AuthContext.jsx";
+import { useModal } from "../../providers-contexts/ModalContext.jsx";
 
 import styles from "./Header.module.css";
 
 const Header = () => {
-  const { loggedIn } = useAuth();
+  const { toggleAccount } = useAuth();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { toggleModal } = useModal();
+
+  let haveToken = Cookies.get("token") ? true : false;
+
+  useEffect(() => {
+    setIsLoggedIn(haveToken);
+  }, [haveToken]);
+
   const handleLogout = () => {
-    console.log("logout");
+    toggleModal(
+      true,
+      "آیا برای خروج از حساب کاربری اطمینان دارید؟",
+      <FaUserSlash />,
+      exitFunc
+    );
   };
+  const exitFunc = () => {
+    toggleAccount(false, "", "");
+    setIsLoggedIn(false);
+  };
+
   return (
     <header className={styles.header}>
       <div>
@@ -21,7 +43,7 @@ const Header = () => {
       <div className={styles.accountPart}>
         <FaRegUser />
 
-        {loggedIn.isLoggedIn ? (
+        {isLoggedIn ? (
           <button onClick={handleLogout}>خروج</button>
         ) : (
           <>

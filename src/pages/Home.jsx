@@ -1,9 +1,9 @@
-
+import HomePage from "../componens/templates/HomePage"
 
 const Home = () => {
   return (
     <div>
-      Home Page
+      <HomePage/>
     </div>
   )
 }

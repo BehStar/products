@@ -1,15 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import BotoStartIcon
- from "../modules/BotoStartIcon.jsx";
+import BotoStartIcon from "../modules/BotoStartIcon.jsx";
 import { useRegister } from "../../configs/mutations";
 import { useAlert } from "../../providers-contexts/AlertContext.jsx";
 import { usePersonAccount } from "../../providers-contexts/PersonContext.jsx";
 import styles from "./RegisterPage.module.css";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
 
 const RegisterPage = () => {
   const [person, setPerson] = useState({
@@ -104,7 +102,7 @@ const RegisterPage = () => {
         </div>
         <h3>فرم ثبت نام</h3>
         <div className={styles.boxInputs}>
-            {/* username */}
+          {/* username */}
           <div className={styles.row}>
             <input
               type="text"

@@ -55,3 +55,14 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 1s;
+}
+.slide-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms, visibility 0s linear 300ms;
+}

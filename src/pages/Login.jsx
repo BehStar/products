@@ -1,11 +1,23 @@
+import { useState, useEffect } from "react";
 
+import LoginPage from "../componens/templates/LoginPage.jsx";
+import useRedirectIfLoggedIn from "../configs/useRedirectIfLoggedIn.js";
 
 const Login = () => {
-  return (
-    <div>
-      LoginPage
-    </div>
-  )
-}
+  const [isVisible, setIsVisible] = useState(false);
 
-export default Login
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  useRedirectIfLoggedIn();
+  return (
+    <div
+      className={`${isVisible ? "slide-enter-active" : "slide-exit-active"}`}
+    >
+      <LoginPage />
+    </div>
+  );
+};
+
+export default Login;
