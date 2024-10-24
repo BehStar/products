@@ -1,0 +1,93 @@
+
+.modalContainer {
+    position: fixed;
+    display: table;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+    z-index: 0; 
+  }
+  
+  .modalBackground {
+    display: table-cell;
+    background: rgba(0, 0, 0, 0.7); 
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .modal {
+    width: 472px;
+    height: 338px;
+    background: white;
+    color: black;
+    padding: 50px;
+    display: inline-block;
+    border-radius: 30px;
+    font-weight: 300;
+    position: relative;
+    animation: blowUpModal 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards; 
+  }
+  
+  .modalContainer.out .modal {
+    animation: blowUpModalTwo 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards; 
+  }
+  
+  .modal .header {
+    height: 98px;
+    font-size: 25px;
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+  }
+
+  .modal p {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 25px;
+  }
+.btnsWrapper{
+    display: flex;
+    gap: 10;
+
+  }
+  .btnsWrapper button {
+    width: 160px;
+    height: 41px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #DFDFDF;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .btnsWrapper button:first-child{
+    background-color: #F43F5E;
+    color: white;
+  }
+  
+  
+  @keyframes blowUpModal {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes blowUpModalTwo {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }

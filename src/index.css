@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-height: 48px;
+  --footer-height: 32px;
+}
+
+body {
+  font-family: "Vazirmatn";
+}
+
+main,
+header {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+header {
+  height: var(--header-height);
+}
+
+main {
+  min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
+  border: 1px solid #000;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+footer {
+  width: 100%;
+  height: var(--footer-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #55a3f0;
+  color: white;
+  font-size: 20px;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
