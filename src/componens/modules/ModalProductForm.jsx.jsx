@@ -33,7 +33,7 @@ const ModalProductForm = () => {
     quantity: "",
     price: "",
   });
-  const [showSuccessMessage, setShowSuccessMessage] = useState(true); // state جدید برای کنترل نمایش پیغام
+  const [showSuccessMessage, setShowSuccessMessage] = useState(true); 
 
   const { mutate: createMutate, isFetching: isFetchingCreateMutate } =
     useCreateProduct();
@@ -59,7 +59,7 @@ const closeModal = () => {
     modalRef.current.classList.add(styles.out);
     setTimeout(() => {
       toggleModalProductForm(false);
-      if (modalRef.current) { // بررسی مجدد برای modalRef.current
+      if (modalRef.current) { 
         modalRef.current.classList.remove(styles.out);
       }
     }, 500);
@@ -126,9 +126,9 @@ const closeModal = () => {
 
     createMutate(
       {
-        name: productInfo.name,
-        quantity: productInfo.quantity,
-        price: productInfo.price,
+        name: productInfo.name.trim(),
+        quantity: productInfo.quantity.trim(),
+        price: productInfo.price.trim(),
       },
       {
         onSuccess: () => {

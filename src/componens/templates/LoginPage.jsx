@@ -50,7 +50,7 @@ const LoginPage = () => {
       return;
     }
     loginMutate(
-      { username: person.username, password: person.password },
+      { username: person.username.trim(), password: person.password },
       {
         onSuccess: (data) => {
           toggleAlert(true, `${person.username} عزیز خوش آمدید`, "ورود موفق");

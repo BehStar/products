@@ -65,7 +65,7 @@ const RegisterPage = () => {
       return;
     }
     registerMutate(
-      { username: person.username, password: person.password },
+      { username: person.username.trim(), password: person.password },
       {
         onSuccess: () => {
           toggleAlert(
