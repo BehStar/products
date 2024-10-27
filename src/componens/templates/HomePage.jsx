@@ -1,11 +1,12 @@
 
+import styles from './HomePage.module.css';
 
-const HomePage = () => {
+function HomePage() {
   return (
-    <div>
-      
+    <div className='home-page' >
+      <h1 className={styles.title}>خوش آمدید</h1>
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

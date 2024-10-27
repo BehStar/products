@@ -1,5 +1,4 @@
 .wrapper {
-    background-color: green;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -10,9 +9,7 @@
     font-weight: 700px;
     font-size: 31px;
     text-align: center;
-    /* display: flex;
-    justify-content: center; */
-    font-family: "Kalameh";
+    font-family: 'Shabnam', sans-serif;
   }
   .wrapper form {
     width: 460px;

@@ -1,0 +1,30 @@
+.body {
+  padding: 16px 52px 18px 39px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  font-size: 12px;
+  background-color: white;
+  border-bottom: 1px solid #f2f2f2;
+}
+.body a {
+  display: grid;
+  grid-template-columns: repeat(3, 196px) minmax(250px, 1fr);
+  color: #282828;
+}
+.body > li {
+  min-width: 196px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end;
+  align-items: center;
+  gap: 14px;
+}
+.body:hover {
+  background-color: rgba(30, 143, 255, 0.1);
+}
+.check {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}

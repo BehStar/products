@@ -1,0 +1,50 @@
+.wrapper {
+    /* background-color: coral; */
+    margin: 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper div {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #eee;
+    /* border: 1px solid #ccc; */
+    cursor: pointer;
+    color: black;
+  }
+  .numbers {
+    display: flex;
+    gap: 14px;
+  }
+  .number {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #8d8d8d80;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8d8d8d80;
+    cursor: pointer;
+  }
+  .activePage {
+    background-color: #55a3f0;
+    color: white;
+  }
+  .wrapper button {
+    height: 35px;
+    padding: 0 10px;
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8d8d8d80;
+    border: 2px solid #8d8d8d80;
+    margin: 0 14px;
+    /* font-family: "Vazirmatn"; */
+  }
+  

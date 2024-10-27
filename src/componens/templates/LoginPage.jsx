@@ -54,7 +54,6 @@ const LoginPage = () => {
       {
         onSuccess: (data) => {
           toggleAlert(true, `${person.username} عزیز خوش آمدید`, "ورود موفق");
-          console.log(data.token)
           toggleAccount(true, data.token, person.username);
           setPerson({ username: "", password: "" });
           setPersonAccount({

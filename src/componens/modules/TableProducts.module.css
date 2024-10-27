@@ -1,0 +1,51 @@
+.wrapperTable {
+  height: 737px;
+  border-radius: 30px;
+  overflow-x: auto;
+  border: 1px solid #e4e4e4;
+}
+
+.wrapperTable .table {
+  width: 100%;
+}
+.header {
+  padding: 16px 52px 18px 39px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  font-size: 14px;
+  font-weight: 500;
+  color: #282828;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+.header span {
+  display: grid;
+  grid-template-columns: repeat(3, 196px) minmax(250px, 1fr);
+  color: #282828;
+}
+.header > li {
+  min-width: 196px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end;
+  align-items: center;
+  gap: 14px;
+}
+
+.btnRemove {
+  padding: 0 2rem;
+  font-family: "Vazirmatn";
+  background-color: brown;
+  color: white;
+  border-radius: 0.5rem;
+}
+.errorMessage {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 20px;
+  color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

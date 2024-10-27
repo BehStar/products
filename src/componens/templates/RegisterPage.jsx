@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import BotoStartIcon from "../modules/BotoStartIcon.jsx";
-import { useRegister } from "../../configs/mutations";
+import { useRegister } from "../../configs/mutations.js";
 import { useAlert } from "../../providers-contexts/AlertContext.jsx";
 import { usePersonAccount } from "../../providers-contexts/PersonContext.jsx";
 import styles from "./RegisterPage.module.css";

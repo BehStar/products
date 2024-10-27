@@ -1,8 +1,8 @@
-import HomePage from "../componens/templates/HomePage";
-
 import { useState, useEffect } from "react";
 
-const Login = () => {
+import ProductPage from "../componens/templates/ProductPage.jsx";
+
+const Product = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -13,9 +13,9 @@ const Login = () => {
     <div
       className={`${isVisible ? "slide-enter-active" : "slide-exit-active"}`}
     >
-      <HomePage />
+      <ProductPage />
     </div>
   );
 };
 
-export default Login;
+export default Product;

@@ -36,8 +36,9 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div>
+      <div className={styles.publicLinks}>
         <NavLink to="/">Home</NavLink>
+        <NavLink to="/products">Products</NavLink>
       </div>
 
       <div className={styles.accountPart}>

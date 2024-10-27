@@ -1,0 +1,69 @@
+/* PriceRangeSlider.module.css */
+.price-range-slider {
+    width: 100%;
+    float: left;
+    padding: 10px 20px;
+  }
+  
+  .range-value {
+    margin: 0;
+  }
+  
+  .range-value input {
+    width: 100%;
+    background: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: initial;
+    box-shadow: none;
+    border: none;
+    margin: 20px 0 20px 0;
+  }
+  
+  .range-bar {
+    position: relative;
+    border: none;
+    background: #000;
+    height: 3px;
+    width: 96%;
+    margin-left: 8px;
+  }
+  
+  .range-bar .ui-slider-range {
+    background: #06b9c0;
+  }
+  
+  .range-bar .ui-slider-handle {
+    border: none;
+    border-radius: 25px;
+    background: #fff;
+    border: 2px solid #06b9c0;
+    height: 17px;
+    width: 17px;
+    top: -0.52em;
+    cursor: pointer;
+  }
+  
+  .range-bar .ui-slider-handle + span {
+    background: #06b9c0;
+  }
+  
+  .range-input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background: #06b9c0;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  .range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #06b9c0;
+    cursor: pointer;
+  }

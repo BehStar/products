@@ -27,9 +27,7 @@ header {
 
 main {
   min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
-  border: 1px solid #000;
   margin: 1rem auto;
-  padding: 1rem;
 }
 
 footer {
@@ -65,4 +63,20 @@ button {
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 300ms, transform 300ms, visibility 0s linear 300ms;
+}
+
+.no-product {
+  width: 100%;
+  height: 3rem;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: brown;
+}
+
+.home-page {
+  min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
+  border: 1px solid #e4e4e4;
+  border-radius: 30px;
 }

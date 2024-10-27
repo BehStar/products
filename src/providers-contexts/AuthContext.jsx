@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [setLoggedIn] = useState({
+  const [loggedIn,setLoggedIn] = useState({
     isLoggedIn: false,
     token: "",
     username: "",
@@ -20,9 +20,15 @@ export const AuthProvider = ({ children }) => {
     }
     setLoggedIn(isLoggedIn, token, username);
   };
+  const getIsLoggedAccount = () => {
+    const token = Cookies.get("token");
+    const username = Cookies.get("username");
+    const isLoggedIn = token && username ? true : false;
+    return { isLoggedIn, token, username };
+  };
 
   return (
-    <AuthContext.Provider value={{ toggleAccount }}>
+    <AuthContext.Provider value={{ toggleAccount,getIsLoggedAccount }}>
       {children}
     </AuthContext.Provider>
   );

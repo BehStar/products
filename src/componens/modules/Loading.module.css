@@ -1,0 +1,53 @@
+.wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dottedLoader {
+  position: relative;
+  width: 100px; 
+  height: 100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dottedLoader::after,
+.dottedLoader::before {
+  content: "";
+  position: absolute;
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  border: 4px #0075ff;
+  border-style: dotted solid dotted solid;
+  animation: turn-left 1.5s linear infinite;
+}
+
+.dottedLoader::before {
+  left: calc(50% - 20px); 
+  top: calc(50% - 20px); 
+  width: 60px;
+  height: 60px; 
+  border-style: dotted dotted solid solid;
+  animation: turn-right 1.5s linear infinite;
+}
+
+@keyframes turn-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes turn-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

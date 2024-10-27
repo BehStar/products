@@ -1,0 +1,82 @@
+.wrapperSearch {
+  width: 100%;
+  height: 68px;
+  padding: 0 28px 0 25px;
+  margin-bottom: 28px;
+  border-radius: 16px;
+  color: black;
+  border: 1px solid #e4e4e4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.searchBox {
+  height: 25px;
+  display: flex;
+  gap: 12px;
+  position: relative;
+  cursor: pointer;
+}
+.searchBox p {
+  color: #00000099;
+}
+.searchBox .forHover {
+  width: 8.5rem;
+  padding: 0.3rem 1rem;
+  color: white;
+  font-size: 10px;
+  border-radius: 0.3rem;
+  background-color: #55a3f0;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  transition: 1s;
+  scale: 0;
+}
+.searchBox:hover .forHover {
+  scale: 1;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  font-family: "Vazirmatn";
+}
+.searchBox input::placeholder {
+  font-weight: 400px;
+  font-size: 16px;
+  /* font-family: 'Vazirmatn'; */
+  color: #00000099;
+}
+.headerAdmin {
+  height: 52px;
+  padding-right: 1rem;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+
+  flex-direction: row-reverse;
+  border-right: thin solid #e4e4e4;
+}
+.textBox {
+  display: grid;
+  padding: 0 8px;
+}
+.textBox p:first-child {
+  font-weight: 400px;
+  font-size: 1rem;
+  color: #282828;
+}
+.textBox p:last-child {
+  font-weight: 300px;
+  font-size: 14px;
+  color: #282828;
+  margin-top: -10px;
+}
+.img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: coral;
+}

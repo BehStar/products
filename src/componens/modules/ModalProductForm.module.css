@@ -1,0 +1,152 @@
+.modalContainer {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  z-index: 0;
+  backdrop-filter: blur(10px)
+}
+
+.modalBackground {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+.modal {
+  width: 472px;
+  height: 448px;
+  padding: 30px 36px;
+  background: white;
+  color: black;
+  display: inline-block;
+  border-radius: 30px;
+  position: relative;
+  animation: blowUpModal 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.modalContainer.out .modal {
+  animation: blowUpModalTwo 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.modal .header {
+  /* height: 98px; */
+  /* padding: 35px 0; */
+  margin-bottom: 30px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.modal form {
+  display: grid;
+  gap: 16px;
+}
+.modal form .row {
+  width: 100%;
+  display: grid;
+}
+.modal form .row label {
+  height: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.modal form .row input {
+  height: 42px;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-family: "Vazirmatn";
+  background-color: #f2f2f2;
+}
+.modal form .row input::placeholder {
+  color: #8d8d8d;
+}
+.modal form .row div {
+  display: grid;
+  position: relative;
+}
+
+.modal .errorMessage {
+  padding: 0.3rem 1rem;
+  color: white;
+  font-size: 10px;
+  border-radius: 0.3rem;
+  background-color: #55a3f0;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  transition: 1s;
+}
+.showToHiddenErrorMessage {
+  opacity: 0;
+  scale: 0;
+}
+.hiddenToShowErrorMessage {
+  opacity: 1;
+  scale: 1;
+}
+.modal .errorMessage:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 0.25rem solid transparent;
+  border-right: 0.25rem solid transparent;
+  border-top: 0.5rem solid #55a3f0;
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+}
+.btnsWrapper {
+  width: 100%;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 19px;
+}
+.btnsWrapper button {
+  height: 41px;
+  text-align: center;
+  padding: 10px 0;
+  margin: 10px 0;
+  font-size: 16px;
+  background-color: #dfdfdf;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: "Vazirmatn";
+}
+.btnsWrapper button:first-child {
+  background-color: #55a3f0;
+  color: white;
+}
+
+@keyframes blowUpModal {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes blowUpModalTwo {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}

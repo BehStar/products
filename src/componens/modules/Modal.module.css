@@ -8,6 +8,7 @@
     left: 0;
     transform: scale(1);
     z-index: 0; 
+    backdrop-filter: blur(10px)
   }
   
   .modalBackground {
@@ -28,6 +29,7 @@
     font-weight: 300;
     position: relative;
     animation: blowUpModal 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards; 
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   }
   
   .modalContainer.out .modal {
