@@ -36,7 +36,13 @@ const HeaderProducts = ({ query, setQuery, minMaxData }) => {
               <p>کاربر</p>
             )}
           </div>
-          <div className={styles.img}></div>
+          <div className={styles.img}>
+            {getIsLoggedAccount().isLoggedIn ? (
+              <img src="/admin.jpg" alt="admin" />
+            ) : (
+              <img src="/no-admin.jpg" alt="no-admin" />
+            )}
+          </div>
         </div>
       </div>
       {isShowFilterProducts && (
