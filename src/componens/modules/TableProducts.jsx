@@ -5,7 +5,6 @@ import { useModal } from "../../providers-contexts/ModalContext";
 import { useAlert } from "../../providers-contexts/AlertContext";
 import { useRemoveProducts } from "../../configs/mutations";
 
-import Loading from './Loading.jsx'
 import DeleteModalIcon from "./DeleteModalIcon";
 import RowTable from "./RowTable";
 import styles from "./TableProducts.module.css";
@@ -50,8 +49,9 @@ const TableProducts = ({ products, errorMessageProducts }) => {
       true,
       "آیا از حذف محصولات اطمینان دارید؟",
       <DeleteModalIcon />,
-      () => removeProducts(ids)
+      () => removeProducts({ids})
     );
+    console.log('ids',{ids})
   };
 
   return (
