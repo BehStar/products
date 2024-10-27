@@ -127,8 +127,8 @@ const closeModal = () => {
     createMutate(
       {
         name: productInfo.name.trim(),
-        quantity: productInfo.quantity.trim(),
-        price: productInfo.price.trim(),
+        quantity: productInfo.quantity,
+        price: productInfo.price,
       },
       {
         onSuccess: () => {

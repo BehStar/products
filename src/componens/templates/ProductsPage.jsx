@@ -98,7 +98,6 @@ const ProductsPage = () => {
 
   const totalPages = data?.totalPages;
   const products = data?.data;
-  let reversedProducts = products ? [...products].reverse() : [];
 
   return (
     <div>
@@ -109,7 +108,7 @@ const ProductsPage = () => {
       />
       {isLoggedIn && <ManagerProducts />}
       {isFetching && <Loading/>}
-      <TableProducts products={reversedProducts} errorMessageProducts={errorMessageProducts}/>
+      <TableProducts products={products} errorMessageProducts={errorMessageProducts}/>
       <Pagination
         page={query.page}
         setQuery={setQuery}

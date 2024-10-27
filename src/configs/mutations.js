@@ -25,8 +25,9 @@ export const useDeleteProduct = (id) => {
 // Remove Some Products
 export const useRemoveProducts = () => {
   const mutationFn = async(data) => {
+
     try {
-      const response =api.delete(`products`, data);
+      const response =api.delete(`products`, {data});
       return response;
     } catch (error) {
       console.log(error);

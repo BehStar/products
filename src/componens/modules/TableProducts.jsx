@@ -51,7 +51,6 @@ const TableProducts = ({ products, errorMessageProducts }) => {
       <DeleteModalIcon />,
       () => removeProducts({ids})
     );
-    console.log('ids',{ids})
   };
 
   return (
